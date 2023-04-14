@@ -41,7 +41,7 @@ const Navbar = () => {
   return (
     <div className="w-full flex justify-between items-center border-b-2 border-gray-200 py-2 px-4">
       <Link href="/">
-        <div className="ml-7 w-[100px] md:w-[150px]">
+        <div className="ml-7 w-[130px] md:w-[150px]">
           <Image
             className="cursor-pointer"
             src={Logo}
