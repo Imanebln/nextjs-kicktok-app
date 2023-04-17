@@ -85,11 +85,11 @@ const VideoCard: NextPage<IProps> = ({
             {likes?.length || 0}
           </p>
         </div>
-        <Link href={`/detail/${_id}`}>
+        {/* <Link href={`/detail/${_id}`}>
           <p className="mt-5 text-md text-gray-800 cursor-pointer w-210">
             {caption}
           </p>
-        </Link>
+        </Link> */}
       </div>
     );
   }

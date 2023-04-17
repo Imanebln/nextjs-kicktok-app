@@ -51,6 +51,7 @@ const Detail = ({ postDetails }: IProps) => {
 
   const addComment = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
+    if (isPostingComment) return;
     if (userProfile) {
       if (comment) {
         setIsPostingComment(true);
@@ -135,7 +136,7 @@ const Detail = ({ postDetails }: IProps) => {
           <div className="px-10">
             <p className=" text-md text-gray-600">{post.caption}</p>
           </div>
-          <div className="mt-10 px-10 flex flex-row items-between md:gap-x-44">
+          <div className="mt-10 px-10 flex flex-col md:flex-row items-between  gap-y-6 md:gap-x-44">
             {userProfile && (
               <LikeButton
                 comments={post.comments}
@@ -145,7 +146,7 @@ const Detail = ({ postDetails }: IProps) => {
                 handleDislike={() => handleLike(false)}
               />
             )}
-            <div className="flex self-end">
+            <div className="flex self-start md:self-end">
               <SocialMedia />
             </div>
           </div>

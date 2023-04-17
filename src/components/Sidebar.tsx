@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { AiFillHome, AiOutlineMenu } from "react-icons/ai";
 import { ImCancelCircle } from "react-icons/im";
-import { IoClose } from "react-icons/io5";
+import { IoClose, IoGameControllerOutline } from "react-icons/io5";
 import GoogleLogin from "react-google-login";
 import Discover from "./Discover";
 import Footer from "./Footer";
