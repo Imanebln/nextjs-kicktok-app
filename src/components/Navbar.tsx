@@ -70,6 +70,12 @@ const Navbar = () => {
           </button>
         </form>
       </div>
+      <button
+        onClick={handleSearch}
+        className="md:hidden block pl-4 text-2xl text-gray-400"
+      >
+        <BiSearch />
+      </button>
       <div>
         {userProfile ? (
           <div className="flex md:gap-10">
@@ -107,7 +113,7 @@ const Navbar = () => {
               <div className="py-1" role="none">
                 <a
                   href="#"
-                  className="text-gray-700 block px-4 py-2 text-sm hover:bg-slate-50 flex items-center gap-2"
+                  className="text-gray-700 px-4 py-2 text-sm hover:bg-slate-50 flex items-center gap-2"
                   role="menuitem"
                   id="menu-item-0"
                   onClick={() => setShowDropdown(false)}
@@ -118,7 +124,7 @@ const Navbar = () => {
                 <Link href={`/profile/${userProfile._id}`}>
                   <a
                     href="#"
-                    className="text-gray-700 block px-4 py-2 text-sm hover:bg-slate-50 flex items-center gap-2"
+                    className="text-gray-700 px-4 py-2 text-sm hover:bg-slate-50 flex items-center gap-2"
                     role="menuitem"
                     id="menu-item-1"
                     onClick={() => setShowDropdown(false)}
@@ -131,7 +137,7 @@ const Navbar = () => {
                 <form method="POST" action="#" role="none">
                   <button
                     type="submit"
-                    className="text-gray-700 block w-full px-4 py-2 text-left text-sm hover:bg-slate-50 flex items-center gap-2"
+                    className="text-gray-700 w-full px-4 py-2 text-left text-sm hover:bg-slate-50 flex items-center gap-2"
                     role="menuitem"
                     id="menu-item-3"
                     onClick={() => {
