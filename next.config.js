@@ -10,6 +10,7 @@ const nextConfig = {
       "upload.wikimedia.org",
       "lh3.googleusercontent.com",
       "images.unsplash.com",
+      "media.licdn.com",
     ],
   },
 };
