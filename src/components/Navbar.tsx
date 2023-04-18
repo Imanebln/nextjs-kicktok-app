@@ -70,12 +70,6 @@ const Navbar = () => {
           </button>
         </form>
       </div>
-      <button
-        onClick={handleSearch}
-        className="md:hidden block pl-4 text-2xl text-gray-400"
-      >
-        <BiSearch />
-      </button>
       <div>
         {userProfile ? (
           <div className="flex md:gap-10">
@@ -83,7 +77,7 @@ const Navbar = () => {
               <button className="border-2 px-2 md:px-4 text-md font-semibold flex items-center gap-2">
                 <IoMdAdd className="text-xl font-bold" />
                 {` `}
-                <span className="md:block">Upload</span>
+                <span className="md:block hidden">Upload</span>
               </button>
             </Link>
             {userProfile.image && (

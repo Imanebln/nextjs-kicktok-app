@@ -33,6 +33,16 @@ const Profile = ({ data }: IProps) => {
     fetchVideos();
   }, [showUserVideos, userLikedVideos, userVideos]);
 
+  const getUserLikes = () => {
+    let likes = 0;
+    if (userVideos && userVideos.length) {
+      userVideos.map((video) => {
+        likes += video.likes?.length ?? 0;
+      });
+    }
+    return likes;
+  };
+
   return (
     <div className="w-full">
       <div className="flex gap-6 md:gap-10 mb-4 bg-white w-full">
@@ -55,13 +65,14 @@ const Profile = ({ data }: IProps) => {
           <p className="text-sm font-medium"> {user.userName}</p>
           <div className="flex flex-row gap-3 mt-8">
             <div>
-              <strong>400</strong> Following
+              <strong>0</strong> Following
             </div>
             <div>
-              <strong>256</strong> Followers
+              <strong>0</strong> Followers
             </div>
             <div>
-              <strong>25</strong> Likes
+              <strong> {getUserLikes()} </strong>{" "}
+              {getUserLikes() > 1 ? "Likes" : "Like"}
             </div>
           </div>
         </div>

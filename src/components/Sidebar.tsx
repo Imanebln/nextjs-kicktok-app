@@ -13,7 +13,6 @@ import SuggestedAccounts from "./SuggestedAccounts";
 const Sidebar = () => {
   const [showSidebar, setShowSidebar] = useState(true);
 
-  const userProfile = false;
   const { pathname } = useRouter();
   const activeLink =
     "flex items-center gap-3 hover:bg-primary p-3 justify-center xl:justify-start cursor-pointer font-semibold text-[#DE3155] rounded";
