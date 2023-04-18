@@ -8,8 +8,6 @@ import { GoVerified } from "react-icons/go";
 import { BsPlay } from "react-icons/bs";
 import { MdFavorite } from "react-icons/md";
 import { Video } from "../../types";
-import { log } from "console";
-import LikeButton from "./LikeButton";
 
 interface IProps {
   post: Video;

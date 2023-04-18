@@ -131,7 +131,7 @@ const Detail = ({ postDetails }: IProps) => {
                 </div>
                 <p className="text-md"> {post.postedBy.userName}</p>
               </div>
-              <div className="border-2 border-[#DE3155] text-[#DE3155] font-semibold hover:bg-[#f8e7eb] px-6 py-1 rounded-md self-center">
+              <div className="border-2 border-[#DE3155] text-[#DE3155] font-semibold hover:bg-[#f8e7eb] px-3 py-1 rounded-md self-center">
                 Follow
               </div>
             </div>

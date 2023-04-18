@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebookF } from "react-icons/fa";
+import { FaFacebookF, FaShare } from "react-icons/fa";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { RiSendPlaneFill } from "react-icons/ri";
@@ -31,9 +31,12 @@ const SocialMedia = () => {
       >
         <AiOutlineTwitter className="h-5 w-5" />
       </button>
-      {/* <button type="button" className=" mb-2 p-3 text-xs font-medium u">
-        <IoMdShareAlt className="text-black h-5 w-5" />
-      </button> */}
+      <button
+        type="button"
+        className="bg-black mb-2 inline-block rounded-full p-3 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+      >
+        <FaShare className="h-5 w-5" />
+      </button>
     </div>
   );
 };
