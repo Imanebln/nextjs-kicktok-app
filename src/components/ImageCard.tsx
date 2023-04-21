@@ -1,8 +1,4 @@
-import Image from "next/image";
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import Logo from "../../utils/me4.jpg";
-import axios from "axios";
+import React from "react";
 const ImageCard = ({ image }: any) => {
   return (
     <img

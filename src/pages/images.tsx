@@ -39,7 +39,7 @@ const Images = () => {
   return (
     <div>
       {isLoading ? (
-        <div className="flex flex-row text-2xl font-bold items-center align-middle gap-5 m-auto">
+        <div className="flex flex-row text-2xl font-bold justify-center align-middle mt-28 gap-5 m-auto">
           {" "}
           <FiLoader />
           <span>Loading...</span>
