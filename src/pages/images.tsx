@@ -3,32 +3,40 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Masonry from "react-masonry-css";
 import { FiLoader } from "react-icons/fi";
+import useImagesStore from "../../store/imagesStore";
 const Images = () => {
   const [imageData, setImageData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
+
+  const { fetchImages, images, isLoading } = useImagesStore();
 
   useEffect(() => {
-    // Generate a random number between 1 and 1000
-    const randomPage = Math.floor(Math.random() * 1000) + 1;
+    fetchImages();
+  }, [fetchImages]);
 
-    // Make a request to the Unsplash API when the component mounts
-    axios
-      .get(`https://api.unsplash.com/photos?page=${randomPage}`, {
-        params: {
-          client_id: "WZvQi8paj4VtNEANcHjXbhyf6rviQZbtSRQV59kJoUk",
-          // query: "mercedes",
-          per_page: 30, // Number of images to retrieve
-        },
-      })
-      .then((response) => {
-        setImageData(response.data);
-        setIsLoading(false);
-      })
-      .catch((error) => {
-        console.log(error);
-        setIsLoading(false);
-      });
-  }, []);
+  // useEffect(() => {
+  //   // Generate a random number between 1 and 1000
+  //   const randomPage = Math.floor(Math.random() * 1000) + 1;
+
+  //   // Make a request to the Unsplash API when the component mounts
+  //   axios
+  //     .get(`https://api.unsplash.com/photos?page=${randomPage}`, {
+  //       params: {
+  //         client_id: "WZvQi8paj4VtNEANcHjXbhyf6rviQZbtSRQV59kJoUk",
+  //         // query: "mercedes",
+  //         per_page: 30,
+  //         page: 10,
+  //       },
+  //     })
+  //     .then((response) => {
+  //       setImageData(response.data);
+  //       setIsLoading(false);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //       setIsLoading(false);
+  //     });
+  // }, []);
 
   const breakpoints = {
     default: 4,
@@ -50,7 +58,7 @@ const Images = () => {
           className="my-masonry-grid"
           columnClassName="my-masonry-grid_column"
         >
-          {imageData.map((image, index) => (
+          {images.map((image, index) => (
             <div key={index}>
               <ImageCard image={image} />
             </div>
